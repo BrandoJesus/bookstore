@@ -17,12 +17,17 @@ export class LoginComponent implements OnInit {
 
   onLoginGoogle() {
     this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider()); 
-    //this.router.navigate(['admin/list-books']); //TODO: verificar esto
+    this.router.navigate(['admin/list-books']); //TODO: verificar esto
+  }
+
+  onLoginFacebook() {
+    console.log('onLoginFacebook');    
+    this.afAuth.auth.signInWithPopup(new auth.FacebookAuthProvider());
+
   }
 
   onLogout() {
     this.afAuth.auth.signOut();
-    console.log('logout');
-    
+    console.log('logout');    
   }
 }
