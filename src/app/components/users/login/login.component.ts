@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   }
 
   onLoginGoogle() {
-    this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
+    this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider()); 
     //this.router.navigate(['admin/list-books']); //TODO: verificar esto
   }
 
