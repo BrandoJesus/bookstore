@@ -26,7 +26,6 @@ export class RegisterComponent implements OnInit {
   onLoginGoogle() {
     this.authService.loginGoogleUser()
     .then((res) => {
-      // console.log('onLoginGoogle ', res);
       this.onloginRedirect();
     }).catch(err => this.messageError(err));
   }
@@ -34,7 +33,6 @@ export class RegisterComponent implements OnInit {
   onLoginFacebook() {
     this.authService.loginFacebookUser()
     .then((res) => {
-      // console.log('onLoginFacebook ', res);
       this.onloginRedirect();
     }).catch(err => this.messageError(err));
   }
