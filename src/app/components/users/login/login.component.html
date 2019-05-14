@@ -21,6 +21,17 @@
                 <div class="form-group">
                   <a routerLink="/user/register" class="form-control login-user">Are you new ?</a>
                 </div>
+                <div class="form-group">
+                  <a href="#" class="btn btn-block btn-social btn-facebook">
+                    <span class="fa fa-facebook"></span>
+                    Facebook
+                  </a>
+                  <a href="#" class="btn btn-block btn-social btn-google" (click)="onLoginGoogle()">
+                    <span class="fa fa-google"></span>
+                    Google
+                  </a>
+                </div>
+                <a (click)="onLogout()">Salir</a>
               </form>
             </div>
           </div>
