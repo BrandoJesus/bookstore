@@ -20,7 +20,9 @@ export class DataApiService {
   private books: Observable<BookInterface[]>;
   private bookDoc: AngularFirestoreDocument<BookInterface>;
   private book: Observable<BookInterface>;
-  public selectedBook: BookInterface = {};
+  public selectedBook: BookInterface = {
+    id: null
+  };
 
   getAllBooks() {
     return this.books = this.booksCollection.snapshotChanges()

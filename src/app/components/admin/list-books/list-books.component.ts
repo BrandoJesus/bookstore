@@ -31,7 +31,7 @@ export class ListBooksComponent implements OnInit {
   }
 
   onPreUpdateBook(book: BookInterface) {
-    this.dataApi.selectedBook = Object.assign({}, book)
+    this.dataApi.selectedBook = Object.assign({}, book);
   }
 
 }
