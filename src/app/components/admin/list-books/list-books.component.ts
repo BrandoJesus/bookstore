@@ -11,21 +11,27 @@ import { NgForm } from '@angular/forms';
 export class ListBooksComponent implements OnInit {
 
   constructor(private dataApi: DataApiService) { }
-  private books = [];
+  private books: BookInterface[];
 
   ngOnInit() {
     this.getListBooks();
   }
 
   getListBooks() {
-    this.dataApi.getAllBooks().subscribe(books => {
+    this.dataApi.getAllBooks()
+    .subscribe(books => {
       this.books = books;
     });
   }
 
-  OnDeletebook() {
-    console.log('DELETE BOOK');
-    
+  onDeletebook(idBook: string): void {
+    console.log('DELETE BOOK', idBook);
+    const confirmacion = confirm('Are you sure?');
+    if(confirmacion) this.dataApi.deleteBook(idBook);
+  }
+
+  onPreUpdateBook() {
+    this.dataApi.selectedBook = Object.assign({}, book)
   }
 
 }
