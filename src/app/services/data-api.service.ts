@@ -25,6 +25,7 @@ export class DataApiService {
   };
 
   getAllBooks() {
+    this.booksCollection = this.afs.collection<BookInterface>('books');
     return this.books = this.booksCollection.snapshotChanges()
       .pipe(map(changes => {
         return changes.map(action => {
