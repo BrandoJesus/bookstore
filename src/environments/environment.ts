@@ -12,7 +12,7 @@ export const environment = {
     storageBucket: "bookstore-a4edf.appspot.com",
     messagingSenderId: "694416246978",
     appId: "1:694416246978:web:4d7d5c869957e1d5"
-  }
+  },
 };
 
 /*

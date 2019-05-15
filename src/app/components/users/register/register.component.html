@@ -7,9 +7,9 @@
             <div class="card-body text-center">
               <form #formRegister="ngForm" (ngSubmit)="onAddUser()">
                 <h1 class="h3 mb-3 font-weight-normal">Register</h1>
-                <div class="alert alert-danger" role="alert" *ngIf="isError">
+                <!-- <div class="alert alert-danger" role="alert" *ngIf="isError">
                   {{msgError}}
-                </div>
+                </div> -->
                 <div class="form-group">
                   <input type="text" [(ngModel)]="username" name="username" class="form-control" 
                   placeholder="Username" required minlength="8">
@@ -18,18 +18,18 @@
                   <input type="email" [(ngModel)]="email" name="email" class="form-control" 
                   placeholder="Email" required minlength="8">
                 </div>
-                <div class="alert alert-danger" role="alert" *ngIf="email.touched && !email.valid">
+                <!-- <div class="alert alert-danger" role="alert" *ngIf="email.touched && !email.valid">
                   <div *ngIf="email.errors.required">Email is required</div>
                   <div *ngIf="email.errors.minlength">Email must be at least 8 characters</div>
-                </div>
+                </div> -->
                 <div class="form-group">
                   <input type="password" [(ngModel)]="password" name="password" class="form-control" 
                   placeholder="Password" required minlength="6" maxlength="10">
                 </div>
-                <div class="alert alert-danger" role="alert" *ngIf="password.touched && !password.valid">
+                <!-- <div class="alert alert-danger" role="alert" *ngIf="password.touched && !password.valid">
                   <div *ngIf="password.errors.required">Password is required</div>
                   <div *ngIf="password.errors.minlength">Password must be at least 5 characters</div>
-                </div>
+                </div> -->
                 <hr>
                 <div class="form-group">
                   <h5>Seleccionar image:</h5>
