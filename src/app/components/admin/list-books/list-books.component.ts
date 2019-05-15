@@ -30,7 +30,7 @@ export class ListBooksComponent implements OnInit {
     if(confirmacion) this.dataApi.deleteBook(idBook);
   }
 
-  onPreUpdateBook() {
+  onPreUpdateBook(book: BookInterface) {
     this.dataApi.selectedBook = Object.assign({}, book)
   }
 
