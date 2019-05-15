@@ -22,6 +22,7 @@ export class ModalComponent implements OnInit {
       // new
       bookForm.value.userUid = this.userUid;
       this.dataApi.addBook(bookForm.value);
+      
     } else {
       // update
       this.dataApi.updateBook(bookForm.value);
